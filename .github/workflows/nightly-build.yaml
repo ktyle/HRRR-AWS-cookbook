@@ -8,15 +8,13 @@ on:
 jobs:
   build:
     if: ${{ github.repository_owner == 'ProjectPythia' }}
-    uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@main
+    uses: ProjectPtyhia/cookbook-actions/.github/workflows/build-book.yaml@feat/clinder
     with:
-      build_command: 'myst build --execute --html'
-
+      execute_on_binderhub: true
   deploy:
     needs: build
     uses: ProjectPythia/cookbook-actions/.github/workflows/deploy-book.yaml@main
 
-#   We don't have a link-checker with MyST right now
-#   link-check:
-#     if: ${{ github.repository_owner == 'ProjectPythia' }}
-#     uses: ProjectPythia/cookbook-actions/.github/workflows/link-checker.yaml@main
+  link-check:
+    if: ${{ github.repository_owner == 'ProjectPythia' }}
+    uses: ProjectPythia/cookbook-actions/.github/workflows/link-checker.yaml@main
