@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     if: ${{ github.repository_owner == 'ProjectPythia' }}
-    uses: ProjectPtyhia/cookbook-actions/.github/workflows/build-book.yaml@feat/clinder
+    uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@feat/clinder
     with:
       execute_on_binderhub: true
   deploy:
