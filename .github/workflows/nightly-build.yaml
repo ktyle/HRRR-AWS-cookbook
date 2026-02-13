@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    if: ${{ github.repository_owner == 'ProjectPythia' }}
+    if: ${{ github.repository_owner == 'ktyle' }}
     uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@feat/clinder
     with:
       execute_on_binderhub: true
@@ -16,5 +16,5 @@ jobs:
     uses: ProjectPythia/cookbook-actions/.github/workflows/deploy-book.yaml@main
 
   link-check:
-    if: ${{ github.repository_owner == 'ProjectPythia' }}
+    if: ${{ github.repository_owner == 'ktyle' }}
     uses: ProjectPythia/cookbook-actions/.github/workflows/link-checker.yaml@main
